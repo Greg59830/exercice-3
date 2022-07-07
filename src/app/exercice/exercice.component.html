@@ -1,0 +1,17 @@
+<div class="row my-3">
+    <div class="col-12 col-md-8 offset-md-2 bg-dark text-white p-3 rounded">
+        <h5 class="display-5 text-muted">Exercice Property Binding</h5>
+        <hr>
+        <div class="row mb-3">
+            <div class="col-10">
+                <input type="text" name="username" placeholder="Username" id="username" class="form-control" [(ngModel)]="username">
+            </div>
+            <div class="col-2">
+                <button class="btn btn-outline-warning w-100" (click)="onResetUsername()" [disabled]="!username.length"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+            </div>
+        </div>
+        <div class="row">
+            <p class="my-0">Votre nom d'utilisateur est : <b> {{ username }} </b></p>
+        </div>
+    </div>
+</div>
